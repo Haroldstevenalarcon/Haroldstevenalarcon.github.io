@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón con cambio de color</title>
+    <style>
+        /* Estilo del checkbox invisible */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Estilo inicial del botón */
+        label {
+            background-color: #4CAF50; /* Color inicial (verde) */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Transición suave */
+            display: inline-block;
+        }
+
+        /* Estilo cuando el checkbox está marcado (botón en azul) */
+        input[type="checkbox"]:checked + label {
+            background-color: blue; /* Cambiar a azul cuando el checkbox esté marcado */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Checkbox invisible que controla el estado -->
+<input type="checkbox" id="toggleColor">
+
+<!-- Etiqueta asociada al checkbox que actúa como el botón -->
+<label for="toggleColor">Haz clic aquí</label>
+
+</body>
+</html>

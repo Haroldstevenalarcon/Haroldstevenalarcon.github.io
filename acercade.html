@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <link rel="shortcut icon" href="alarmj.png" type="image/x-icon">
+    <link rel="stylesheet" href="estiloemp.css">
+    <Style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #2293f6;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #fffde438, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #fffde440, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .titulo{
+            color: #642a73;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        header {
+            width: 100%;
+            height: 740px;
+            position: relative; /* Necesario para posicionar correctamente el pseudo-elemento */
+            background: linear-gradient(to right, #081861ba, #a676e074); /* Gradiente como capa superior */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(imagen1acercade.png);
+            background-size: cover;
+            background-attachment: fixed;
+            filter: brightness(40%); /* Aplica el filtro solo a la imagen */
+            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+        }
+
+        nav{
+            padding: 30px 50px 50px 0px;
+            text-align: right;
+            width: 100%; 
+        	left: 0; 
+            position:fixed;
+           /* background-image: none;
+            background-color: #2a2733;*/
+        }
+        
+        nav >a {
+            color: rgb(227, 233, 239);
+            font-weight: 200;
+            text-decoration: none;
+            margin-right: 40px;
+
+        }
+        nav > a:hover{
+            color: blue;
+            
+        }
+
+        .wave{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            stroke: none; 
+            fill:#2293f6;
+        }
+
+        header .textosencabesado{
+            display:flex ;  
+            height: 400px;
+            width: 95%;
+            align-items: center; 
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+
+        }
+        .textosencabesado h1{
+            font-size: 60px;
+            color: beige;
+            text-align: center;
+
+
+        }
+        .textosencabesado h2{
+            font: size 150px; 
+            font-weight: 300;
+            color : beige ; 
+            text-align: center;
+        }
+            
+                       /*------------- RECTANGULOS HEADER 1--------------- */
+        .rectangulo1 {
+            background: rgb(38, 38, 75);       
+            border: 3px; /* Borde color negro y de 3 píxeles de grosor */
+            width: 100%;           /* Ancho de 250 píxeles */
+            height: 100px;          /* Alto de 150 píxeles */
+        }
+
+        .rectangulo2 {
+            background: rgb(38, 38, 75);       
+            border: 3px; /* Borde color negro y de 3 píxeles de grosor */
+            width: 100%;           /* Ancho de 250 píxeles */
+            height: 240px;          /* Alto de 150 píxeles */
+        }
+                    /* -------------------RECTANGULOS HEADER 1---------------- */
+
+                    
+                  /* ----------------------BOTONES FLOTANTES-------------------- */
+        .botones-flotantes {
+            position: fixed;
+            top: 40%; /* 20% de la altura de la pantalla desde arriba */
+            left: 96%; /* 10% del ancho de la pantalla desde la izquierda */
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes giroMoneda {
+        0% {
+            transform: rotateY(0deg);
+        }
+        50% {
+        transform: rotateY(180deg);
+        }
+        100% {
+        transform: rotateY(360deg);
+        }
+        }     
+
+        .botones-flotantes a img {
+            width: 50px; 
+            height: 50px;
+            transition: transform 0.2s ease; 
+            animation: giroMoneda 15s ease-in-out infinite;
+        }
+        .botones-flotantes a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Cuando no haya hover, la imagen se mantiene rotando normalmente */
+        .botones-flotantes a img:active, .botones-flotantes a img:not(:hover) {
+            animation-play-state: running; /* Se reanuda la animación cuando el mouse no está sobre la imagen */
+        }
+        /* Aplicar la animación de escala solo durante la pausa de la animación */
+        .botones-flotantes a img:hover {
+            animation: none; /* Se elimina la animación de giro cuando se pasa el mouse */
+        }
+                             /*--------------- BOTONES FLOTANTES------------ */
+
+    </Style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="prueba.html">Inicio</a>
+            <a href="acercade.html">Acerca de</a>
+            <a href="#">Socios</a>
+            <a href="#">Recomendaciones y Servicios</a>
+            <a href="#">Contactos</a>
+        </nav>
+
+        <div
+        class="rectangulo1">
+        </div>
+
+        <div class="textosencabesado">
+            <h1>"Convierte tu casa en algo mejor"</h1>
+            <h2>Con nosotros convertirás tu lugar en algo más seguro por medio del internet</h2>
+        </div>
+
+        <div
+        class="rectangulo2">
+        </div>
+      
+    </header>
+
+    <div class="botones-flotantes">
+        <a href="https://wa.me/+573108701173" class="whatsapp" target="_blank" title="WhatsApp">
+            <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://instagram.com/tuusuario" class="instagram" target="_blank" title="Instagram">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://facebook.com/tuusuario" class="facebook" target="_blank" title="Facebook">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+    </div>
+
+</body>
+</html>

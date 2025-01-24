@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>Servidor Web  alarma</title>
+        <style>
+            h1{
+                margin: 0px;
+                text-decoration: underline;
+            }
+            button {
+            cursor: pointer;
+            border: none;
+            border-radius:50px;
+            background-color: aqua;
+            color: blue;
+           
+            }
+            body{
+                background: #FFA17F;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+                color:aqua;
+                box-sizing: border-box;
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            } 
+            pp{
+                margin-top: 50%;
+                color:white;
+                
+            }
+            ul{
+               color: white;
+            }
+            columnas{
+                display :flex;
+        
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <div>
+        <h1>Servidor Web ESP32</h1>
+
+        </div>
+
+        <p>
+        <a href='/on'><button style='height:100px;width:100px'>ON</button></a>
+        </p>
+        <p>
+        <a href='/off'><button style='height:100px;width:100px'>OFF</button></a>
+        </p>
+        
+        <div>
+            <form action="/" method="GET">
+                <input type="number" name="numero" placeholder="tiempo_de_espera" required>
+                <button type="submit">activar alarma </button>
+            </form>
+        </div>
+       
+
+
+        <br/>
+        <br/>
+
+        <div>
+        <pp>
+            "acontinuacion presentaremos las intrucciones para cada boton y que debes precionar y sus resp'ectivas funciones"  
+        </pp>
+       
+
+        
+            <br><br><br><br><br>
+     
+        <div class="columnas">
+            <pp> use este boton cuando deses activar el sistema de defensa y alerta </p>
+            <a href='/emg'><button style='height:100px;width:100px'>emergencia</button></a>
+        </div>
+        <div class="columnas">
+            <pp> use este boton cuando deses llamar a  un familiar o a un numero de emergencia </p>
+            <a href='/conf'><button style='height:100px;width:100px'>policia </button></a>
+        </div>
+        <div class="columnas">
+            <pp> use este boton cuando desees activar los aspersores o demas actuadores  </p>
+            <a href='/conf1'><button style='height:100px;width:100px'>aspersores  </button></a>
+        </div>
+    </center>
+
+   
+    </body>
+</html>
