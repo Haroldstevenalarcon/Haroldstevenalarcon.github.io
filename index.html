@@ -1,677 +1,530 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDS Villavicencio</title>
-    <link rel="shortcut icon" href="alarmj.png" type="image/x-icon">
-    <link rel="stylesheet" href="estiloemp.css">
-   
-    </script>
+    <title>CDA GUAMAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <link rel="shortcut icon" href="imagencda.png" type="image/x-icon">
     <style>
-        /* Global Styles */
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-    /* Global Styles */
-        }
-
+        /* Estilos personalizados usando clases de Tailwind */
         body {
-            font-family: 'Open Sans', sans-serif;
-            background: #2293f6;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #fffde438, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #fffde440, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-            
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f7;
             color: #333;
-            line-height: 1.6;
         }
-        
-        /* zonas curvosas */
-        /*ENCABESADO*/
-    
-        .titulo{
-            color: #642a73;
-            font-size: 30px;
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        header{
-            width: 100% ;
-            height: 740px ;
 
-            background: #F0F2F0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #6883ff73, #f0f2f06a), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: linear-gradient(to left, #6883ff73, #f0f2f08e), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-           
-
-            background-size: cover ;
-            background-attachment:fixed ;
-            position:relative ;
-        }
-        nav{
-            text-align: right;
-            padding: 30px 50px 0 0;
-        }
-        nav >a {
-            color: aliceblue;
-            font-weight: 200;
-            text-decoration: none;
-            margin-right: 40px;
-        }
-        nav > a:hover{
-            color: blue;   
-        }
-        header .textosencabesado{
-            display:flex ;  
-            height: 400px;
-            width: 95%;
-            align-items: center; 
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-        }
-        .textosencabesado h1{
-            font-size: 60px;
-            color: beige;
-            text-align: center;
-        }
-        .textosencabesado h2{
-            font: size 150px; 
-            font-weight: 300;
-            color : beige ; 
-            text-align: center;
-
-        }
-        .wave{
-            position: absolute;
-            bottom: 0;
+        /* Portada */
+        .main-header {
+            position: relative;
             width: 100%;
+            height: 100vh;
+            /* Fondo completamente rojo */
+            background-color: red;
+            /* Cambiado a un color sólido */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             color: white;
-            stroke: none; 
-            fill:#2293f6;
+            overflow: hidden;
         }
 
-        /*sections */
-        .contenedor--sobre-nosotros{
-
-            width: 100% ;
-            height: 900px ;
-         
-            background-image: url(PvDn.gif);
-           
-           padding: 10px 0;
-           text-align: center;
-           background-position:center;
-           background-size: cover;
-           position:relative ;
-           background-attachment: fixed;
-           
-           
-           
-        }
-        .contenedor-sobre-nosotros {
-            display:flex ; 
-            justify-content: space-evenly;
-            text-align: left;
-        }
-        .imagen-sobre-nosotros{
-            width: 35%;
-
-        }
-        .contenedor-textos{
-            width: 48%;
-        }
-        .contenedor-textos h3{
-            margin-bottom: 20px;
-
-        }
-        .contenedor-textos h3 span {
-            background-color: #4d0686;
-            color: white;
-            border-radius: 50%;
-            display: inline-block;
-            text-align: center;
-            width: 30px;
-            height: 30px;
-            padding: 2px;
-            box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-            margin: 5px;
-        }
-        .contenedor-textos p {
-            padding: 0px 0px 30px 15px;
-            font-weight:300 ;
-            text-align:justify ;
-        }
-         .titulo {
-            text-align: center;
-            padding: 0px 0px 40px 15px;
-            width:300 ;
-           
-        }
-        /* Sections */
-        .section {
-            padding: 60px 20px;
-        }
-
-        .section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #642a73;
-        }
-
-        .contenedor {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Socios acomodo de las cartas Section */
-        .cuerpofondo{
-            /*background-image: url(llama.gif);
-           
-           padding: 10px 0;
-           text-align: center;
-           background-position:center;
-           background-size: cover;
-           position:relative ;
-*/
-        }
-       
-        .cuerpo{
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo más oscuro para mayor contraste */
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            margin-top: 2%;
-
-
-            
         }
-        .cuerpo::before {
+
+        /* Menu Principal en la Portada - Esquina Superior Derecha */
+        .main-nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Alinea verticalmente los elementos */
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .main-nav-links {
+            display: flex;
+            justify-content: flex-end;
+            /* Alinea los enlaces a la derecha */
+            align-items: center;
+            /* Centra verticalmente los enlaces */
+        }
+
+        .main-nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            /* Reduce el margen entre los enlaces */
+            font-size: 1em;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .main-nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Agregada sombra al hacer hover */
+        }
+
+        /* Logo ajustado */
+        .logo {
+            max-height: 50px;
+            /* Ajusta el tamaño máximo del logo */
+            margin-right: 20px;
+            /* Espacio a la derecha del logo */
+        }
+
+        .title {
+            font-size: 3em;
+            /* Reduce el tamaño del título */
+            margin-bottom: 15px;
+            /* Reduce el margen inferior */
+            animation: fadeIn 1s ease-in-out;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Sombra para resaltar el texto */
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            /* Reduce el tamaño del subtítulo */
+            margin-bottom: 25px;
+            /* Reduce el margen inferior */
+            animation: fadeInUp 1s ease-in-out;
+            font-style: italic;
+            /* Estilo itálico para el subtítulo */
+        }
+
+        .cta-button {
+            background-color: #63b3ed;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            /* Agregada transición para box-shadow */
+            animation: pulse 2s infinite alternate;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #4a90e2;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animaciones de la Portada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Corazones */
+        .heart {
+            position: absolute;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+            /* Corazones más sutiles */
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(calc(-100vh - 10px)) translateX(calc(100vw * var(--x-offset)));
+                opacity: 0;
+            }
+        }
+
+        .main-header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
-            z-index: -1;
-        }
-        .titulo {
-            position :static; /* Posiciona el título en la parte superior */
-            top: 20px; /* Ajusta la distancia desde la parte superior */
-            left: 50%; /* Centra horizontalmente */
-            text-align: center;
-            color:#642a73 ; 
-        }
-        .container {
-            display: flex;
-            flex-direction: row; /* Alinea las tarjetas en columnas separadas */
-            justify-content: center;
-            gap: 20px; /* Espaciado entre columnas */
-            z-index: 1;
-            margin-top: 80px; /* Agrega espacio debajo del título */
-        }
-        .card {
-            position: relative;
-            width: 400px;
-            height: 400px;
-            perspective: 1000px; 
-        }
-        .card .face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 10px;
+            pointer-events: none;
             overflow: hidden;
-            transition: transform 0.5s;
         }
-        .card .front {
-            transform: rotateY(0deg);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        }
-        .card .front img {
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/></filter></defs><rect width="100%" height="100%" filter="url(#noise)"/></svg>');
+            opacity: 0.3;
+            animation: noise 0.5s steps(10) infinite;
+            z-index: 0;
         }
-        .card .front h2 {
+
+        @keyframes noise {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            10% {
+                transform: translate(-5%, -5%);
+            }
+
+            20% {
+                transform: translate(5%, 10%);
+            }
+
+            30% {
+                transform: translate(-10%, 5%);
+            }
+
+            40% {
+                transform: translate(15%, -10%);
+            }
+
+            50% {
+                transform: translate(-10%, 20%);
+            }
+
+            60% {
+                transform: translate(-15%, -15%);
+            }
+
+            70% {
+                transform: translate(10%, 0);
+            }
+
+            80% {
+                transform: translate(5%, 15%);
+            }
+
+            90% {
+                transform: translate(20%, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* Animación al hacer click */
+        .ripple {
             position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 45px;
-            line-height: 45px;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple-effect 0.6s linear;
+            background-color: rgba(255, 255, 255, 0.4);
+            /* Blanco translúcido para el efecto */
+        }
+
+        @keyframes ripple-effect {
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+
+        /* Elementos animados */
+        .gradient-header .animated-element {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 10s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto hover personalizado para las tarjetas de servicio */
+        .service-card {
+            background-color: #f3f4f6;
+            /* bg-gray-100 */
+            padding: 1rem;
+            /* p-6 -> 1.5rem */
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            /* shadow-md */
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+            /* transition-colors duration-300 */
         }
-        .card .back {
-            transform: rotateY(180deg);
-            background: rgba(3, 35, 54, 0.9);
-            padding: 15px;
-            color: #f3f3f3;
+
+        .service-card:hover {
+            background-color: #e53e3e;
+            /* Color rojo al pasar el ratón */
+            color: white;
+            /* Color del texto a blanco al pasar el ratón para mejor contraste */
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            /* text-xl -> 1.25rem */
+            font-weight: 600;
+            /* font-semibold */
+            margin-bottom: 0.5rem;
+            /* mb-2 -> 0.5rem */
+        }
+
+        .service-description {
+            color: #4a5568;
+            /* text-gray-700 */
+        }
+
+        /* Estilos para los íconos de redes sociales */
+        .social-icons {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
         }
-        .card .back h3 {
-            font-size: 24px;
-            margin-top: 20px;
-            letter-spacing: 1px;
-        }
-        .card .back p {
-            letter-spacing: 1px;
-            font-size: 14px;
-        }
-        .card .back .link {
-            border-top: 1px solid #f3f3f3;
-            padding-top: 10px;
-        }
-        .card .back .link a {
-            color: #f3f3f3;
-            text-decoration: none;
-        }
-        .card:hover .front {
-            transform: rotateY(180deg);
-        }
-        .card:hover .back {
-            transform: rotateY(360deg);
-        }
-        /*seccion de socios fin */
-        /* ubicacion */
-        /* vision */
-        .titulovision{
-            align-content: center;
-            margin-bottom: 20% ;
-        }
-        .vision{
-            height: 120vh;
-           
-            display: flex;
+
+        .social-icons a {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            margin-bottom:auto;
-            margin-top: auto;
-        }
-        .imagenesvision{
-            position: relative;
-            width: 200px;
-            height: 200px;
-            transform-style: preserve-3d;
-            animation: rotate 20s linear infinite;
-          
-        }
-            @keyframes rotate {
-            0% {
-                transform: rotateY(0deg)
-            }
-            100% {
-                transform: rotateY(360deg)
-            }
-        }
-        .imagenesvision span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform-origin: center;
-            transform-style: preserve-3d;
-            transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
-            opacity: 1;
-        }
-        .imagenesvision span img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            backface-visibility: visible;
-            transition: transform 0.5s, opacity 0.5s;
-        }
-        .imagenesvision span img:hover {
-            transform: scale(1.2);
-            opacity: 1;
-        }
-        
-    
-        
-        /*final de vision 
-        */
-        .ubicacionmap{ 
-               
-            background: #F0F2F0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #6883ff73, #f0f2f06a), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: linear-gradient(to left, #6883ff73, #f0f2f08e), url(iotportada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-           
-            background-size: cover ;
-            background-attachment:fixed ;
-            position:relative ; 
-          
-                 
-            width: 100% ;
-            min-height: auto;
-        }
-        /*redes */
-       img.bb{
-        background-color: #333;
-
-       }
-        /* Recomendaciones Section  */
-     
-      
-        .recomendacion .serviciocont {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 100px;
-
-
+            margin: 0 1rem;
+            /* Espaciado incrementado */
+            color: white;
+            font-size: 2rem;
+            /* Tamaño incrementado */
+            transition: color 0.3s;
         }
 
-        .servicio-ind {
-            background: #c2e59c;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            width: auto;
-            height: auto;
-            padding: 50px;
-            border-radius: 50% 30% 50% 30%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-            text-align: center;
+        .social-icons a:hover {
+            color: #feb2b2;
         }
-        .servicio-ind:hover{
-            background: gray;
-        }
-         /*  para las imagenes si colocamos en  esta secciondentro de la carta */
-        .servicio-ind img {
-            max-width: 100%;
-            height: 1500px;
-            margin-bottom: 15px;
-        }
-        footer {
-            background-image: url(fondoofo.gif);
-            color: black;
-            padding: 10px 0;
-            text-align: center;
-            background-position: center;
-            background-size: cover;
-            position:relative ;
 
-            left: 0;
-            top: 0;
-            width: 100%;
-            z-index: 99;
-            border-radius: 0;
-            backdrop-filter: blur(5px);/*no hace efecto borroso*/
-            opacity: 10;
-            
-        }
-        footer .contenedor {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        footer .contenedorfo {
-            flex: 1 1 100px;
-            margin: 10px;
-        }
-        footer h4 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-         /* ----------------------BOTONES FLOTANTES-------------------- */
-         .botones-flotantes {
-           
-            bottom: 10px;
+        /* Estilos para la barra fija de redes sociales */
+        .fixed-social-bar {
             position: fixed;
             top: 50%;
-            left: auto;
-            right: 20px;
+            right: 1rem;
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            z-index: 100;
+            align-items: center;
         }
-        @keyframes giroMoneda {
-        0% {
-            transform: rotateY(0deg);
-        }
-        50% {
-        transform: rotateY(180deg);
-        }
-        100% {
-        transform: rotateY(360deg);
-        }
-        }     
 
-        .botones-flotantes a img {
-            width: 50px; 
-            height: 50px;
-            transition: transform 0.2s ease; 
-            animation: giroMoneda 15s ease-in-out infinite;
+        .fixed-social-bar a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem 0;
+            color: #e53e3e;
+            font-size: 2rem;
+            /* Tamaño incrementado */
+            transition: color 0.3s;
+        }
 
-         
+        .fixed-social-bar a:hover {
+            color: #c53030;
         }
-        .botones-flotantes a img:hover {
-            transform: scale(1.1);
-        }
-        
-
-        .botones-flotantes a img:active, .botones-flotantes a img:not(:hover) {
-            animation-play-state: running; /* Se reanuda la animación cuando el mouse no está sobre la imagen */
-        }
-        
-        .botones-flotantes a img:hover {
-            animation: none; 
-        }
-                             /*--------------- BOTONES FLOTANTES------------ */
     </style>
-    <script>
-    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="prueba.html">Inicio</a>
-            <a href="acercade.html">Acerca de</a>
-            <a href="#socioss">Socios</a>
-            <a href="#recomendacionesred">Recomendaciones y Servicios</a>
-            <a href="#ubicacionmap">Contactos</a>
-            <a href="trabajadores.html">trabajadores</a>
-        </nav>
-        <div class="textosencabesado">
-            <h1>"Diseño de paginas web "</h1>
-            <h2>Con nosotros convertirás  haras tu pagina web como soñastes  </h2>
+
+<body class="bg-gray-100">
+
+    <!-- Encabezado con gradiente -->
+    <header class="main-header">
+        <div class="overlay">
+            <!-- Menú principal en la portada -->
+            <nav class="main-nav">
+                <img src="imagencda.png" alt="Logo CDA GUAMAL" class="logo">
+                <div class="main-nav-links">
+                    <a href="#quienes-somos">Quiénes Somos</a>
+                    <a href="#mision-vision">Misión y Visión</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#ubicacion">Ubicación</a>
+                    <a href="#contacto">Contáctanos</a>
+                </div>
+            </nav>
+            <h1 class="title">¡Bienvenidos a CDA GUAMAL!</h1>
+            <p class="subtitle">Guamal mas cerca de ti</p>
+            <a href="#inicio" class="cta-button">¡Conocer Más!</a>
         </div>
-        <div class="wave">
-            <div style="height: 150px; overflow: hidden;">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                  <defs>
-                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="10%" y2="100%">
-                      <stop offset="0%" style="stop-color: #b7c2f238; stop-opacity: 1;" />
-                      <stop offset="100%" style="stop-color: #1d598dc7; stop-opacity: 1;" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M-0.00,49.85 C203.38,185.52 346.16,-72.33 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" 
-                        style="stroke: none; fill: url(#waveGradient);"></path>
-                </svg>
-              </div>
-        </div>
+
+
     </header>
-  <div class="botones-flotantes">
-        <a href="https://wa.me/+573108701173" class="whatsapp" target="_blank" title="WhatsApp">
-            <img src="whatsapp.png" alt="Instagram">
-        </a>
-        <a href="https://instagram.com/tuusuario" class="instagram" target="_blank" title="Instagram">
-            <img src="instagram.png" alt="Instagram" class="imageninstagram">
-        </a>
-        <a href="https://facebook.com/tuusuario" class="facebook" target="_blank" title="Facebook">
-            <img src="facebook.png" alt="Facebook">
-        </a>
-    </div>
-    <main>
-        <section class="contenedor--sobre-nosotros">
-            <h2 class="titulo"> Dudas que surgen </h2>
-                <div class="contenedor-sobre-nosotros">
-                    <img src="tresh.svg" alt=""class= "imagen-sobre-nosotros">
-                        <div class="contenedor-textos">
-                            <h3><span>1 </span> podras realizar tu pagina web con las caracteristicas que desees </h3>
-                            <p> principalmente se hara tu pagina web apartir  de la informacion y caracteristicas que usted como usuario
-                                 desea añadir teniendo encuenta que el costpo inicial de tu pagina web  sera de 1.500.000 pesos colombianos 
-
-                                 </p>
-
-                            <h3><span>2 </span>cambios realizados  </h3>
-                            <p> se le brinda al usuario hacer tres cambios en cuanto a su informacion o animaciones puestas en su pagina web 
-                                cada cambio tiene un costo de 20.000 pesos colombianos  </p>
-
-                            <h3><span>3</span> cuanto vale cada animacion o personidicacion de nuestra pagina  </h3>
-                            <p>  cada animacion  y costos dicionales se negociaran con nuestros clientes  dependiendo de que deseea 
-                                teniendo como base si son paginas  contables o de visualizxacion de productos si deseas encontrar mas
-                                 informacion  lo invitamos a dar click en el iconmo de whatsapp y preguntanos   </p>       
-                        </div>
-                </div>
-        </section>
-    <section class="cuerpofondo">
-        <div class="cuerpo">
-            <div id="socioss">
-                <h1 class="titulo">Personas a cargo de la creación de tu página web</h1>
-                <div class="container">
-                    <div class="card">
-                        <div class="face front">
-                            <img src="diego.png" alt="Diego">
-                            <h2>Ingeniero Diego</h2>
-                        </div>
-                        <div class="face back">
-                            <h3>Ing. Diego chavez</h3>
-                            <p>Ingeniero electrónico encargado en desarrollo de software</p>
-                            <div class="link">
-                                <a href="https://wa.me/+573108701173" target="_blank">
-                                    <img src="whatsapp.png" alt="WhatsApp">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="face front">
-                            <img src="hard.png" alt="Hardware">
-                            <h2>Ingeniero Harold</h2>
-                        </div>
-                        <div class="face back">
-                            <h3>Ing. Harold alarcon</h3>
-                            <p>Ingeniero electrónico encargado en desarrollo de software</p>
-                            <div class="link">
-                                <a href="https://wa.me/+573214314362" target="_blank">
-                                    <img src="whatsapp.png" alt="WhatsApp">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
-</section>
-         </section>
-        <section class="recomendacion section">
-            <div id="recomendacionesred">
-                <div class="contenedor">
-                    <h2>Recomendaciones</h2>
-                    <div class="serviciocont">
-                        <div class="servicio-ind">
-                            
-                            <h3>Sensor de Proximidad</h3>
-                            <p>El sensor de proximidad también detectará mascotas u otros animales. Para mayor efectividad, colóquelo en zonas estratégicas donde no haya afectaciones al sensor.</p>
-                        </div>
-                        <div class="servicio-ind">
-                           
-                            <h3>Sensor de Gas</h3>
-                            <p>El sensor de gas detectará usos de esta sustancia. Entre más cerca se encuentre de la cocina, será más eficiente.</p>
-                        </div>
-                        <div class="servicio-ind">
-                           
-                            <h3>Mantenimiento</h3>
-                            <p>Se recomienda hacer mantenimiento cada 6 meses para un buen funcionamiento del sistema.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <section class="vision">
-     
-        <center>
-            <div class="titulovision">
-                <h1> rueda giratoria con imagenes que deses </h1>
-            </div>
-        <div class="imagenesvision">
-           <span style="--i:1"><img src="abrirpuer.png" alt=""></span>
-           <span style="--i:2"><img src="alarmj.png" alt=""></span>
-           <span style="--i:3"><img src="cocina.png" alt=""></span></span>
-           <span style="--i:4"><img src="mascotapir.png" alt=""></span>
-           <span style="--i:5"><img src="sensordetemperatura.png" alt=""></span>
-           <span style="--i:6"><img src="sensorgas.png" alt=""></span>
-           <span style="--i:7"><img src="mantenimiento.png" alt=""></span>
-           <span style="--i:8"><img src="hard.png" alt=""></span>
-           
-        </div>
-        </center>
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">Bienvenido a CDA</h2>
+        <p class="text-gray-700">En nuestros centros, garantizamos un diagnóstico preciso y eficiente para tu vehículo.</p>
     </section>
-   
-    <section class="ubicacionmap">
-        <div id="ubicacionmap">
-            <center>
-            <div class = "gogle">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.3824173876683!2d-73.63136982524885!3d4.147228946207457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2dddec1ec769%3A0x6e007356ef69d23!2sCDA%20CARLLANOS!5e1!3m2!1ses!2sco!4v1737348421142!5m2!1ses!2sco"
-                 width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-       
+
+    <!-- Sección de Quiénes Somos -->
+    <section id="quienes-somos" class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">Quiénes Somos</h2>
+        <p class="text-gray-700">Somos CDA GUAMAL S.A.S, un Centro de Diagnostico Automotor, donde nuestros clientes pueden acceder al servicio de Revisión Tecnico-Mecanica de vehículos livianos, motos y motocarros, nuestro principal objetivo es ofrecer un servicio de calidad, con calidez humana, siendo responsables socialmente con la comunidad y medio ambiente. Contamos con un equipo de profesionales altamente calificados y capacitados para ofrecer el mejor servicio en la inspección de vehículos, garantizamos siempre confiabilidad y calidad en los procesos.</p>
+    </section>
+
+    <!-- Sección de Misión y Visión -->
+    <section id="mision-vision" class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">Misión y Visión</h2>
+        <div class="flex flex-wrap justify-around">
+            <div class="w-full md:w-1/2 p-4">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold mb-2">Misión</h3>
+                    <p class="text-gray-700">Nuestra misión en CDA GUAMAL es, ofrecer servicio de Revisión Técnico Mecánica para vehículos livianos, motos y motocarros, con la más alta calidad, precisión, tecnología de punta y personal altamente capacitado, comprometidos con la excelencia, calidez humana y garantizando siempre confiabilidad y calidad en los procesos de inspección.
+                    Nuestro compromiso es generar confianza y satisfacción en nuestros clientes, fomentar una cultura de atención al cliente basados en el respeto y empatía, brindar un servicio excepcional, personalizado y cercano a la comunidad, y contribuir al desarrollo, seguridad vial de la región y cuidado del medio ambiente.
+                    </p>
+                </div>
             </div>
-             </center>
+            <div class="w-full md:w-1/2 p-4">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold mb-2">Visión</h3>
+                    <p class="text-gray-700">En CDA GUAMAL, nos visualizamos como lideres en la región en los procesos de Revisión Técnico Mecánica de vehículos livianos, motos y motocarros, seremos reconocidos por la excelencia en el servicio y atención al cliente, y por garantizar calidad y confiabilidad en los procesos de inspección, por la calidez humana con la comunidad, y por el compromiso con la seguridad vial y el medio ambiente.</p>
+                </div>
+            </div>
         </div>
     </section>
-    <footer>
-        <div class="contenedor">
-            <div class="contenedorfo">
-                <h4>Número</h4>
-                <p>3214314362</p>
-            </div>
 
-            <div class="contenedorfo">
-                <h4>Ubicacion</h4>
-                <p>km9 via catama</p>
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">Nuestros Servicios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Servicio 1 -->
+            <div class="service-card">
+                <p class="service-description">Aseguramos que tu vehículo cumpla con los estándares de seguridad y emisiones.</p>
             </div>
-            <div class="contenedorfo">
-                <h4>gmail</h4>
-                <p>halarcon86@gmail.com</p>
+            <!-- Servicio 2 -->
+            <div class="service-card">
+                <h3 class="service-title">Revisión Técnico-Mecánica </h3>
+                <p class="service-description">Vehículos Livianos,Motocicletas,Motocarros</p>
             </div>
-            <div class="contenedorfo">
-                <h4>Redes Sociales</h4>
-                <div class="redessocialesfooter">
-                    <div class="instaa">
-                        <a href="https://www.instagram.com/"><img src="instagram1.png" alt="Instagram" style="width:40px; margin: 5px;"></a>
-             
-                     </div>
-                </div>
-                <div class="gmail">
-                    <a href="//mail.google.com/mail/u/0/?pli=1#search/halarcon86%40uan.edu.co"><img src="Gmail.png" alt="Facebook" style="width:40px; margin: 5px;" ></a>
-                </div>
-            
-                <div class="faceboo">
-                    <a href="https://www.facebook.com/tuusuario"><img src="facebook.png" alt="Facebook" style="width:40px; margin: 5px;"></a>
-                </div>
+            <!-- Servicio 3 -->
+            <div class="service-card">
+                <h3 class="service-title">•	Venta de SOAT para todo tipo de vehículos.</h3>
+            </div>
+            <!-- Servicio 4 -->
+            <div class="service-card">
+                <h3 class="service-title">Análisis de Gases</h3>
+                <p class="service-description">Verificamos que tu vehículo cumpla con las normativas ambientales.</p>
+            </div>
+            <!-- Servicio 5 -->
+            <div class="service-card">
+                <h3 class="service-title">Revisión de Frenos</h3>
+                <p class="service-description">Garantizamos la seguridad de tu sistema de frenado.</p>
+            </div>
+            <!-- Servicio 6 -->
+            <div class="service-card">
+                <h3 class="service-title">Mantenimiento Preventivo</h3>
+                <p class="service-description">Realizamos mantenimientos para evitar futuras fallas.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section id="ubicacion" class="container mx-auto mt-8 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">Ubicación</h2>
+        <iframe class="map w-full h-96 rounded-lg shadow-md"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3980.6351582021193!2d-73.77447892502536!3d3.8881277960856533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwNTMnMTcuMyJOIDczwrA0NicxOC45Ilc!5e0!3m2!1ses!2sco!4v1757102919946!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+
+  <!-- Barra fija de redes sociales -->
+    <div class="fixed-social-bar">
+        <a href="https://wa.me/+573146689660" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/cda.guamal?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/cda.guamal/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-red-600 text-white text-center py-4">
+        <div class="social-icons">
+            <a href="https://wa.me/+573146689660" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/cda.guamal?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/cda.guamal/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; Centros de Diagnóstico Automotriz. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
-         
 
